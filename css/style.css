@@ -4,7 +4,6 @@
 :root {
   --main-transition: 0.3s all ease;
   --main-color: #0dcaf0;
-
   --secondary-color: #1997b0;
   --light-color: #f6faff;
   --red-color: #f44036;
@@ -729,6 +728,13 @@ nav .mega-menu .col .links .link:hover::before {
   color: var(--main-color);
 }
 
+@media (max-width: 576px) {
+  .pricing .plan .price span,
+  .pricing .plan .price i {
+    font-size: 40px !important;
+  }
+}
+
 .pricing .plan .price i {
   font-size: 80px;
   color: var(--main-color);
@@ -755,7 +761,7 @@ nav .mega-menu .col .links .link:hover::before {
   border-width: 28px;
   border-color: transparent transparent white transparent;
   border-style: solid;
-  bottom: 0;
+  bottom: -1px;
   left: 50%;
   transform: translateX(-50%);
 }
