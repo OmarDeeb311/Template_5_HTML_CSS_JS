@@ -3,7 +3,6 @@
 
 :root {
   --main-transition: 0.3s all ease;
-  /* --main-color: #2196f3; */
   --main-color: #0dcaf0;
 
   --secondary-color: #1997b0;
@@ -687,68 +686,6 @@ nav .mega-menu .col .links .link:hover::before {
 }
 
 /*! End How It Works */
-
-/*! Start Events */
-
-.right-dots {
-  top: 20%;
-  right: 3px;
-  background-image: url("../imgs/dots.png");
-  background-position: top right;
-  background-repeat: no-repeat;
-  width: 15%;
-  height: 27%;
-  z-index: -1;
-}
-
-.left-dots {
-  bottom: 20%;
-  left: 3px;
-  background-image: url("../imgs/dots.png");
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  width: 15%;
-  height: 27%;
-  z-index: -1;
-}
-
-.events .units .unit {
-  transition: var(--main-transition);
-}
-
-.events .units .unit span {
-  transition: var(--main-transition);
-}
-
-.events .units .unit span:first-child {
-  color: var(--main-color);
-}
-
-.events .units .unit:hover {
-  border-color: var(--main-color) !important;
-}
-
-.events .units .unit:hover span {
-  border-color: var(--main-color) !important;
-}
-
-.events input {
-  caret-color: var(--main-color);
-}
-
-.events input:focus {
-  outline: 0;
-}
-
-.events input::placeholder {
-  transition: var(--main-transition);
-}
-
-.events input:focus::placeholder {
-  opacity: 0;
-}
-/*! End Events */
-
 /*! Start Pricing */
 .pricing .plan {
   box-shadow: 0 0 15px 3px #ddd;
@@ -805,12 +742,9 @@ nav .mega-menu .col .links .link:hover::before {
 }
 
 .pricing .popular .label {
-  transform: rotate(90deg);
-  top: 55px;
-  left: 68%;
-  height: fit-content;
+  writing-mode: vertical-lr;
   background-color: var(--main-color);
-  width: 40%;
+  height: 200px;
 }
 
 .pricing .popular .label::after {
@@ -819,10 +753,11 @@ nav .mega-menu .col .links .link:hover::before {
   width: 56px;
   height: 56px;
   border-width: 28px;
-  border-color: transparent white transparent transparent;
+  border-color: transparent transparent white transparent;
   border-style: solid;
   bottom: 0;
-  left: 111px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*! End Pricing */
@@ -968,3 +903,9 @@ nav .mega-menu .col .links .link:hover::before {
 }
 
 /*! End Footer */
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50% !important;
+  }
+}
