@@ -59,51 +59,6 @@ hours.innerHTML = date.getHours();
 minutes.innerHTML = date.getMinutes();
 seconds.innerHTML = date.getSeconds();
 
-function startCountDownTimer() {
-  setInterval(() => {
-    //TODO Normal Seconds
-    if (seconds.innerHTML > 10) {
-      seconds.innerHTML -= 1;
-    }
-    //TODO Critical Seconds
-    else if (seconds.innerHTML <= 10 && seconds.innerHTML != 0) {
-      seconds.innerHTML = `0${seconds.innerHTML - 1}`;
-    }
-    //TODO Normal Minutes
-    else if (minutes.innerHTML > 10) {
-      minutes.innerHTML -= 1;
-      seconds.innerHTML = 60;
-    }
-    //TODO Critical Minutes
-    else if (minutes.innerHTML <= 10 && minutes.innerHTML != 0) {
-      minutes.innerHTML = `0${minutes.innerHTML - 1}`;
-      seconds.innerHTML = 60;
-    }
-    //TODO Normal Hours
-    else if (hours.innerHTML > 10) {
-      hours.innerHTML -= 1;
-      minutes.innerHTML = 60;
-    }
-    //TODO Critical Hours
-    else if (hours.innerHTML <= 10 && hours.innerHTML != 0) {
-      hours.innerHTML = `0${hours.innerHTML - 1}`;
-      minutes.innerHTML = 60;
-    }
-    //TODO Normal Days
-    else if (days.innerHTML > 10) {
-      days.innerHTML -= 1;
-      hours.innerHTML = 24;
-    }
-    //TODO Critical Hours
-    else if (days.innerHTML <= 10 && days.innerHTML != 0) {
-      days.innerHTML = `0${days.innerHTML - 1}`;
-      hours.innerHTML = 24;
-    }
-  }, 1000);
-}
-
-startCountDownTimer();
-
 //! Incearse Number On Scroll
 let clientsDiv = document.querySelector(".stats .row .col:first-child h2");
 let projectsDiv = document.querySelector(".stats .row .col:nth-child(2) h2");
