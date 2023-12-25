@@ -810,7 +810,7 @@ nav .mega-menu .col .links .link:hover::before {
 
 /*! Start Discount */
 .discount {
-  min-height: 100vh;
+  height: 100vh;
 }
 .discount .row .col:first-child .box::before {
   content: "";
