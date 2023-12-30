@@ -4,6 +4,7 @@
 :root {
   --main-transition: 0.3s all ease;
   --main-color: #0dcaf0;
+
   --secondary-color: #1997b0;
   --light-color: #f6faff;
   --red-color: #f44036;
@@ -818,6 +819,12 @@ nav .mega-menu .col .links .link:hover::before {
 .discount {
   height: 100vh;
 }
+@media (max-width: 767px) {
+  .discount {
+    height: auto;
+  }
+}
+
 .discount .row .col:first-child .box::before {
   content: "";
   position: absolute;
@@ -912,6 +919,6 @@ nav .mega-menu .col .links .link:hover::before {
 
 @media (max-width: 500px) {
   html {
-    font-size: 50% !important;
+    font-size: 80% !important;
   }
 }
